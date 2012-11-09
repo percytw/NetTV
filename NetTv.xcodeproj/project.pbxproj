@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C139BCEF164D64EF00D2B04A /* NetTVFavorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C139BCEE164D64EF00D2B04A /* NetTVFavorViewController.m */; };
+		C139BCF1164D657300D2B04A /* NetTVInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C139BCF0164D657300D2B04A /* NetTVInfoDetailViewController.m */; };
+		C1E0E222164BECD7004AC15B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E0E221164BECD7004AC15B /* UIKit.framework */; };
+		C1E0E224164BECD7004AC15B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E0E223164BECD7004AC15B /* Foundation.framework */; };
+		C1E0E226164BECD7004AC15B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E0E225164BECD7004AC15B /* CoreGraphics.framework */; };
+		C1E0E22C164BECD7004AC15B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C1E0E22A164BECD7004AC15B /* InfoPlist.strings */; };
+		C1E0E22E164BECD8004AC15B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E22D164BECD7004AC15B /* main.m */; };
+		C1E0E232164BECD8004AC15B /* NetTVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E231164BECD8004AC15B /* NetTVAppDelegate.m */; };
+		C1E0E23B164BECD8004AC15B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E0E239164BECD8004AC15B /* MainStoryboard.storyboard */; };
+		C1E0E23E164BECD8004AC15B /* NetTVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E23D164BECD8004AC15B /* NetTVHomeViewController.m */; };
+		C1E0E24B164BF445004AC15B /* NetTVInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E0E24A164BF445004AC15B /* NetTVInfoViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C139BCED164D64EF00D2B04A /* NetTVFavorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetTVFavorViewController.h; sourceTree = "<group>"; };
+		C139BCEE164D64EF00D2B04A /* NetTVFavorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetTVFavorViewController.m; sourceTree = "<group>"; };
+		C139BCF0164D657300D2B04A /* NetTVInfoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetTVInfoDetailViewController.m; sourceTree = "<group>"; };
+		C139BCF2164D658300D2B04A /* NetTVInfoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetTVInfoDetailViewController.h; sourceTree = "<group>"; };
+		C1E0E21D164BECD7004AC15B /* NetTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E0E221164BECD7004AC15B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C1E0E223164BECD7004AC15B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C1E0E225164BECD7004AC15B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C1E0E229164BECD7004AC15B /* NetTv-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetTv-Info.plist"; sourceTree = "<group>"; };
+		C1E0E22B164BECD7004AC15B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C1E0E22D164BECD7004AC15B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1E0E22F164BECD8004AC15B /* NetTv-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetTv-Prefix.pch"; sourceTree = "<group>"; };
+		C1E0E230164BECD8004AC15B /* NetTVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetTVAppDelegate.h; sourceTree = "<group>"; };
+		C1E0E231164BECD8004AC15B /* NetTVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetTVAppDelegate.m; sourceTree = "<group>"; };
+		C1E0E23A164BECD8004AC15B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C1E0E23C164BECD8004AC15B /* NetTVHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetTVHomeViewController.h; sourceTree = "<group>"; };
+		C1E0E23D164BECD8004AC15B /* NetTVHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetTVHomeViewController.m; sourceTree = "<group>"; };
+		C1E0E249164BF445004AC15B /* NetTVInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetTVInfoViewController.h; sourceTree = "<group>"; };
+		C1E0E24A164BF445004AC15B /* NetTVInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetTVInfoViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C1E0E21A164BECD7004AC15B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1E0E222164BECD7004AC15B /* UIKit.framework in Frameworks */,
+				C1E0E224164BECD7004AC15B /* Foundation.framework in Frameworks */,
+				C1E0E226164BECD7004AC15B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1E0E212164BECD7004AC15B = {
+			isa = PBXGroup;
+			children = (
+				C1E0E227164BECD7004AC15B /* NetTv */,
+				C1E0E220164BECD7004AC15B /* Frameworks */,
+				C1E0E21E164BECD7004AC15B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C1E0E21E164BECD7004AC15B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1E0E21D164BECD7004AC15B /* NetTv.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C1E0E220164BECD7004AC15B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1E0E221164BECD7004AC15B /* UIKit.framework */,
+				C1E0E223164BECD7004AC15B /* Foundation.framework */,
+				C1E0E225164BECD7004AC15B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1E0E227164BECD7004AC15B /* NetTv */ = {
+			isa = PBXGroup;
+			children = (
+				C1E0E230164BECD8004AC15B /* NetTVAppDelegate.h */,
+				C1E0E231164BECD8004AC15B /* NetTVAppDelegate.m */,
+				C1E0E239164BECD8004AC15B /* MainStoryboard.storyboard */,
+				C1E0E23C164BECD8004AC15B /* NetTVHomeViewController.h */,
+				C1E0E23D164BECD8004AC15B /* NetTVHomeViewController.m */,
+				C1E0E248164BF445004AC15B /* InfoViewController */,
+				C1E0E228164BECD7004AC15B /* Supporting Files */,
+			);
+			path = NetTv;
+			sourceTree = "<group>";
+		};
+		C1E0E228164BECD7004AC15B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1E0E229164BECD7004AC15B /* NetTv-Info.plist */,
+				C1E0E22A164BECD7004AC15B /* InfoPlist.strings */,
+				C1E0E22D164BECD7004AC15B /* main.m */,
+				C1E0E22F164BECD8004AC15B /* NetTv-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C1E0E248164BF445004AC15B /* InfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C1E0E249164BF445004AC15B /* NetTVInfoViewController.h */,
+				C1E0E24A164BF445004AC15B /* NetTVInfoViewController.m */,
+				C139BCF2164D658300D2B04A /* NetTVInfoDetailViewController.h */,
+				C139BCF0164D657300D2B04A /* NetTVInfoDetailViewController.m */,
+				C139BCED164D64EF00D2B04A /* NetTVFavorViewController.h */,
+				C139BCEE164D64EF00D2B04A /* NetTVFavorViewController.m */,
+			);
+			path = InfoViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C1E0E21C164BECD7004AC15B /* NetTv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1E0E244164BECD8004AC15B /* Build configuration list for PBXNativeTarget "NetTv" */;
+			buildPhases = (
+				C1E0E219164BECD7004AC15B /* Sources */,
+				C1E0E21A164BECD7004AC15B /* Frameworks */,
+				C1E0E21B164BECD7004AC15B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetTv;
+			productName = NetTv;
+			productReference = C1E0E21D164BECD7004AC15B /* NetTv.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C1E0E214164BECD7004AC15B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NetTV;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = jhk;
+			};
+			buildConfigurationList = C1E0E217164BECD7004AC15B /* Build configuration list for PBXProject "NetTv" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C1E0E212164BECD7004AC15B;
+			productRefGroup = C1E0E21E164BECD7004AC15B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C1E0E21C164BECD7004AC15B /* NetTv */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C1E0E21B164BECD7004AC15B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1E0E22C164BECD7004AC15B /* InfoPlist.strings in Resources */,
+				C1E0E23B164BECD8004AC15B /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C1E0E219164BECD7004AC15B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1E0E22E164BECD8004AC15B /* main.m in Sources */,
+				C1E0E232164BECD8004AC15B /* NetTVAppDelegate.m in Sources */,
+				C1E0E23E164BECD8004AC15B /* NetTVHomeViewController.m in Sources */,
+				C1E0E24B164BF445004AC15B /* NetTVInfoViewController.m in Sources */,
+				C139BCEF164D64EF00D2B04A /* NetTVFavorViewController.m in Sources */,
+				C139BCF1164D657300D2B04A /* NetTVInfoDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C1E0E22A164BECD7004AC15B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1E0E22B164BECD7004AC15B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C1E0E239164BECD8004AC15B /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1E0E23A164BECD8004AC15B /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C1E0E242164BECD8004AC15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C1E0E243164BECD8004AC15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C1E0E245164BECD8004AC15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NetTv/NetTv-Prefix.pch";
+				INFOPLIST_FILE = "NetTv/NetTv-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C1E0E246164BECD8004AC15B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NetTv/NetTv-Prefix.pch";
+				INFOPLIST_FILE = "NetTv/NetTv-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C1E0E217164BECD7004AC15B /* Build configuration list for PBXProject "NetTv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1E0E242164BECD8004AC15B /* Debug */,
+				C1E0E243164BECD8004AC15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1E0E244164BECD8004AC15B /* Build configuration list for PBXNativeTarget "NetTv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1E0E245164BECD8004AC15B /* Debug */,
+				C1E0E246164BECD8004AC15B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C1E0E214164BECD7004AC15B /* Project object */;
+}

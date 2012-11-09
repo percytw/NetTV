@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="11">
+            <objects>
+                <navigationController id="3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TY2-Et-Dj8" kind="relationship" relationship="rootViewController" id="Ybd-pG-2jg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="185"/>
+        </scene>
+        <!--NetTV Info Detail View Controller - Web Dscrp.-->
+        <scene sceneID="gUv-AO-bNc">
+            <objects>
+                <viewController id="Iyy-8g-Seq" customClass="NetTVInfoDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zee-Ie-Yek">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgv-V7-jv3">
+                                <items>
+                                    <barButtonItem title="TOP" id="7sc-6s-97H"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cAF-lw-zdd"/>
+                                    <barButtonItem title="FWD" id="BYd-Aq-jPb"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZSI-Up-GOZ"/>
+                                    <barButtonItem title="CMT" id="hM3-4p-d2l"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wF4-iy-cK9"/>
+                                    <barButtonItem title="FAV" id="AOH-S1-Tlj">
+                                        <connections>
+                                            <action selector="toInfoFavor:" destination="Iyy-8g-Seq" id="hUQ-nC-Lun"/>
+                                            <segue destination="MIs-VF-ixK" kind="push" id="zV2-So-DhD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mJX-bi-lX6"/>
+                                    <barButtonItem title="BOT" id="c0D-8B-VBK"/>
+                                </items>
+                            </toolbar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPz-60-P9H">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dPz-60-P9H" firstAttribute="leading" secondItem="zee-Ie-Yek" secondAttribute="leading" type="default" id="6Fc-aJ-kbc"/>
+                            <constraint firstItem="Sgv-V7-jv3" firstAttribute="leading" secondItem="zee-Ie-Yek" secondAttribute="leading" type="default" id="7cD-kV-rIQ"/>
+                            <constraint firstItem="dPz-60-P9H" firstAttribute="top" secondItem="zee-Ie-Yek" secondAttribute="top" type="default" id="Ezk-MD-3VM"/>
+                            <constraint firstItem="dPz-60-P9H" firstAttribute="trailing" secondItem="zee-Ie-Yek" secondAttribute="trailing" type="default" id="MbG-LB-dq8"/>
+                            <constraint firstItem="dPz-60-P9H" firstAttribute="bottom" secondItem="Sgv-V7-jv3" secondAttribute="top" type="default" id="i06-4S-fh6"/>
+                            <constraint firstItem="Sgv-V7-jv3" firstAttribute="trailing" secondItem="zee-Ie-Yek" secondAttribute="trailing" type="default" id="kDg-Ez-eZs"/>
+                            <constraint firstItem="Sgv-V7-jv3" firstAttribute="bottom" secondItem="zee-Ie-Yek" secondAttribute="bottom" type="default" id="s9Q-Yn-bYf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Web Dscrp." id="40E-WZ-7X0"/>
+                    <connections>
+                        <outlet property="infoWebToolbar" destination="Sgv-V7-jv3" id="XQd-Nn-vkf"/>
+                        <outlet property="infoWebView" destination="dPz-60-P9H" id="tXF-Kb-tTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bA6-bc-91z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307" y="185"/>
+        </scene>
+        <!--Table View Controller - Favor-->
+        <scene sceneID="GWa-3Q-rns">
+            <objects>
+                <tableViewController id="MIs-VF-ixK" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3AX-jF-PK9">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="vLY-rM-csz">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MIs-VF-ixK" id="LSV-65-Wxo"/>
+                            <outlet property="delegate" destination="MIs-VF-ixK" id="dve-Am-4PJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favor" id="bYM-a4-hl1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="FfR-Up-p8S"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVZ-4H-x4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="185"/>
+        </scene>
+        <!--NetTV Home View Controller - Home-->
+        <scene sceneID="cWE-tb-spd">
+            <objects>
+                <viewController id="TY2-Et-Dj8" customClass="NetTVHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbX-Od-sGX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9R-DZ-o61">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Info">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ToInfo:" destination="TY2-Et-Dj8" eventType="touchUpInside" id="uUO-98-HGw"/>
+                                    <segue destination="rp0-n3-4gb" kind="push" id="1VU-cL-NoP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="n9R-DZ-o61" secondAttribute="bottom" constant="93" id="3YU-FH-4IO"/>
+                            <constraint firstItem="n9R-DZ-o61" firstAttribute="leading" secondItem="jbX-Od-sGX" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Te6-JY-Hc8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="H64-at-zoc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdV-UZ-8Sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="446" y="185"/>
+        </scene>
+        <!--NetTV Info View Controller - Info-->
+        <scene sceneID="3uQ-a7-3vH">
+            <objects>
+                <viewController id="rp0-n3-4gb" customClass="NetTVInfoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="duJ-Vw-gXf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nE-Vi-a5z">
+                                <items>
+                                    <barButtonItem title="HOT" style="plain" id="KAd-On-bCQ"/>
+                                    <barButtonItem title="武进" style="plain" id="1vT-b5-iFH"/>
+                                    <barButtonItem title="常州" style="plain" id="tLe-ah-cdH"/>
+                                    <barButtonItem title="便民" style="plain" id="Rix-OZ-JIq"/>
+                                    <barButtonItem title="社区" style="plain" id="PDi-fv-7mb"/>
+                                    <barButtonItem title="更多" style="plain" id="zVL-pZ-mR2"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pzt-fV-d6X">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="FLe-Q5-eTt" style="IBUITableViewCellStyleDefault" id="2rF-mm-1Pf">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-Q5-eTt">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="Iyy-8g-Seq" kind="push" trigger="accessoryAction" id="bGS-Py-nE7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rp0-n3-4gb" id="kgF-dS-CVn"/>
+                                    <outlet property="delegate" destination="rp0-n3-4gb" id="Lpp-mW-Ze6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6nE-Vi-a5z" firstAttribute="leading" secondItem="duJ-Vw-gXf" secondAttribute="leading" type="default" id="0tY-m0-phH"/>
+                            <constraint firstItem="pzt-fV-d6X" firstAttribute="leading" secondItem="duJ-Vw-gXf" secondAttribute="leading" type="default" id="3kP-Co-Nqm"/>
+                            <constraint firstItem="6nE-Vi-a5z" firstAttribute="top" secondItem="duJ-Vw-gXf" secondAttribute="top" type="default" id="T5N-bG-txX"/>
+                            <constraint firstItem="pzt-fV-d6X" firstAttribute="trailing" secondItem="duJ-Vw-gXf" secondAttribute="trailing" type="default" id="WdB-rR-0XY"/>
+                            <constraint firstItem="6nE-Vi-a5z" firstAttribute="trailing" secondItem="duJ-Vw-gXf" secondAttribute="trailing" type="default" id="fP8-HS-efJ"/>
+                            <constraint firstItem="pzt-fV-d6X" firstAttribute="top" secondItem="6nE-Vi-a5z" secondAttribute="bottom" type="default" id="wqj-4C-Wwr"/>
+                            <constraint firstItem="pzt-fV-d6X" firstAttribute="bottom" secondItem="duJ-Vw-gXf" secondAttribute="bottom" type="default" id="yGk-Zj-hDJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="x7S-hD-NRC">
+                        <barButtonItem key="rightBarButtonItem" title="Home" id="SLP-T0-ZEV"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="infoTableView" destination="pzt-fV-d6X" id="uZN-PY-lfh"/>
+                        <outlet property="infoToolBar" destination="6nE-Vi-a5z" id="G2C-wS-0FZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDp-0v-cq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="185"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NetTVHomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NetTVHomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ToInfo:"/>
+            </relationships>
+        </class>
+        <class className="NetTVInfoDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NetTVInfoDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toInfoFavor:"/>
+                <relationship kind="outlet" name="infoWebToolbar" candidateClass="UIToolbar"/>
+                <relationship kind="outlet" name="infoWebView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="NetTVInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NetTVInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="infoTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="infoToolBar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
