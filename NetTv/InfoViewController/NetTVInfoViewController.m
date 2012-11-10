@@ -14,7 +14,7 @@
     NSMutableArray *_objects;
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *infoTableView;
+//@property (weak, nonatomic) IBOutlet UITableView *infoTableView;
 @property (weak, nonatomic) IBOutlet UIToolbar *infoToolBar;
 @end
 
@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view, typically from a nib.
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -50,7 +50,7 @@
     }
     [_objects insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.infoTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Table View
@@ -110,7 +110,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.infoTableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setWebDetailItem:object];
     }

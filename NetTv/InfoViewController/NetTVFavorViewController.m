@@ -8,24 +8,33 @@
 
 #import "NetTVFavorViewController.h"
 
+
 @interface NetTVFavorViewController (){
     NSMutableArray *_objects;
 }
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end
 
+
 @implementation NetTVFavorViewController
+
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _objects = [NSMutableArray arrayWithObjects:@"item1", @"item2", @"item3", nil];
+    //self.tableView.allowsMultipleSelectionDuringEditing = YES;
+    
+    
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
     
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-  
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,5 +79,7 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+
+
 
 @end

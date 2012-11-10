@@ -38,7 +38,7 @@
                                     <barButtonItem title="FAV" id="AOH-S1-Tlj">
                                         <connections>
                                             <action selector="toInfoFavor:" destination="Iyy-8g-Seq" id="hUQ-nC-Lun"/>
-                                            <segue destination="MIs-VF-ixK" kind="push" id="zV2-So-DhD"/>
+                                            <segue destination="Z3P-DD-t5T" kind="push" id="Ldd-11-dfb"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mJX-bi-lX6"/>
@@ -70,37 +70,63 @@
             </objects>
             <point key="canvasLocation" x="1307" y="185"/>
         </scene>
-        <!--Table View Controller - Favor-->
-        <scene sceneID="GWa-3Q-rns">
+        <!--NetTV Favor View Controller - Favor-->
+        <scene sceneID="TmH-bJ-7Uk">
             <objects>
-                <tableViewController id="MIs-VF-ixK" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3AX-jF-PK9">
+                <tableViewController id="Z3P-DD-t5T" customClass="NetTVFavorViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="6im-SP-E3C">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="8ng-Za-hOf">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Z3P-DD-t5T" id="IbP-59-7T5"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="vLY-rM-csz">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="UJb-o3-Lll" style="IBUITableViewCellStyleDefault" id="c4B-ie-twN">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJb-o3-Lll">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="MIs-VF-ixK" id="LSV-65-Wxo"/>
-                            <outlet property="delegate" destination="MIs-VF-ixK" id="dve-Am-4PJ"/>
+                            <outlet property="dataSource" destination="Z3P-DD-t5T" id="SY9-5S-BXd"/>
+                            <outlet property="delegate" destination="Z3P-DD-t5T" id="jQl-uF-RaW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favor" id="bYM-a4-hl1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="FfR-Up-p8S"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Favor" id="bFe-h4-wxM"/>
+                    <connections>
+                        <outlet property="searchBar" destination="8ng-Za-hOf" id="wcP-yT-sQl"/>
+                        <outlet property="searchDisplayController" destination="u12-Ve-I4S" id="XVy-ra-juL"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wVZ-4H-x4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQN-76-hL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="u12-Ve-I4S">
+                    <connections>
+                        <outlet property="delegate" destination="Z3P-DD-t5T" id="M7I-XZ-Wq5"/>
+                        <outlet property="searchBar" destination="8ng-Za-hOf" id="rKc-66-Mlv"/>
+                        <outlet property="searchContentsController" destination="Z3P-DD-t5T" id="xwp-6k-49N"/>
+                        <outlet property="searchResultsDataSource" destination="Z3P-DD-t5T" id="xAQ-CR-dn9"/>
+                        <outlet property="searchResultsDelegate" destination="Z3P-DD-t5T" id="E47-Co-9Yi"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1739" y="185"/>
+            <point key="canvasLocation" x="1744" y="185"/>
         </scene>
         <!--NetTV Home View Controller - Home-->
         <scene sceneID="cWE-tb-spd">
@@ -121,7 +147,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ToInfo:" destination="TY2-Et-Dj8" eventType="touchUpInside" id="uUO-98-HGw"/>
-                                    <segue destination="rp0-n3-4gb" kind="push" id="1VU-cL-NoP"/>
+                                    <segue destination="drm-wT-Djh" kind="push" id="tUV-LP-tMx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,80 +163,81 @@
             </objects>
             <point key="canvasLocation" x="446" y="185"/>
         </scene>
-        <!--NetTV Info View Controller - Info-->
-        <scene sceneID="3uQ-a7-3vH">
+        <!--NetTV Info View Controller - info-->
+        <scene sceneID="Cv1-OO-PjU">
             <objects>
-                <viewController id="rp0-n3-4gb" customClass="NetTVInfoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="duJ-Vw-gXf">
+                <tableViewController id="drm-wT-Djh" customClass="NetTVInfoViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="d1b-ef-uY7">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nE-Vi-a5z">
-                                <items>
-                                    <barButtonItem title="HOT" style="plain" id="KAd-On-bCQ"/>
-                                    <barButtonItem title="武进" style="plain" id="1vT-b5-iFH"/>
-                                    <barButtonItem title="常州" style="plain" id="tLe-ah-cdH"/>
-                                    <barButtonItem title="便民" style="plain" id="Rix-OZ-JIq"/>
-                                    <barButtonItem title="社区" style="plain" id="PDi-fv-7mb"/>
-                                    <barButtonItem title="更多" style="plain" id="zVL-pZ-mR2"/>
-                                </items>
-                            </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pzt-fV-d6X">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="Cell" textLabel="FLe-Q5-eTt" style="IBUITableViewCellStyleDefault" id="2rF-mm-1Pf">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLe-Q5-eTt">
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <connections>
-                                            <segue destination="Iyy-8g-Seq" kind="push" trigger="accessoryAction" id="bGS-Py-nE7"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="bia-fC-EYx">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nE-Vi-a5z">
+                                    <items>
+                                        <barButtonItem title="HOT" style="plain" id="KAd-On-bCQ"/>
+                                        <barButtonItem title="武进" style="plain" id="1vT-b5-iFH"/>
+                                        <barButtonItem title="常州" style="plain" id="tLe-ah-cdH"/>
+                                        <barButtonItem title="便民" style="plain" id="Rix-OZ-JIq"/>
+                                        <barButtonItem title="社区" style="plain" id="PDi-fv-7mb"/>
+                                        <barButtonItem title="更多" style="plain" id="zVL-pZ-mR2"/>
+                                    </items>
+                                </toolbar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="6nE-Vi-a5z" firstAttribute="leading" secondItem="bia-fC-EYx" secondAttribute="leading" type="default" id="Iyw-bp-9gx"/>
+                                <constraint firstItem="6nE-Vi-a5z" firstAttribute="top" secondItem="bia-fC-EYx" secondAttribute="top" type="default" id="R0S-4y-UK9"/>
+                                <constraint firstItem="6nE-Vi-a5z" firstAttribute="trailing" secondItem="bia-fC-EYx" secondAttribute="trailing" type="default" id="jOx-f8-AlZ"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="JMW-o3-XzZ" style="IBUITableViewCellStyleDefault" id="eER-rS-vas">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMW-o3-XzZ">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                                 <connections>
-                                    <outlet property="dataSource" destination="rp0-n3-4gb" id="kgF-dS-CVn"/>
-                                    <outlet property="delegate" destination="rp0-n3-4gb" id="Lpp-mW-Ze6"/>
+                                    <segue destination="Iyy-8g-Seq" kind="push" trigger="accessoryAction" id="qUD-jL-78Q"/>
                                 </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="6nE-Vi-a5z" firstAttribute="leading" secondItem="duJ-Vw-gXf" secondAttribute="leading" type="default" id="0tY-m0-phH"/>
-                            <constraint firstItem="pzt-fV-d6X" firstAttribute="leading" secondItem="duJ-Vw-gXf" secondAttribute="leading" type="default" id="3kP-Co-Nqm"/>
-                            <constraint firstItem="6nE-Vi-a5z" firstAttribute="top" secondItem="duJ-Vw-gXf" secondAttribute="top" type="default" id="T5N-bG-txX"/>
-                            <constraint firstItem="pzt-fV-d6X" firstAttribute="trailing" secondItem="duJ-Vw-gXf" secondAttribute="trailing" type="default" id="WdB-rR-0XY"/>
-                            <constraint firstItem="6nE-Vi-a5z" firstAttribute="trailing" secondItem="duJ-Vw-gXf" secondAttribute="trailing" type="default" id="fP8-HS-efJ"/>
-                            <constraint firstItem="pzt-fV-d6X" firstAttribute="top" secondItem="6nE-Vi-a5z" secondAttribute="bottom" type="default" id="wqj-4C-Wwr"/>
-                            <constraint firstItem="pzt-fV-d6X" firstAttribute="bottom" secondItem="duJ-Vw-gXf" secondAttribute="bottom" type="default" id="yGk-Zj-hDJ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Info" id="x7S-hD-NRC">
-                        <barButtonItem key="rightBarButtonItem" title="Home" id="SLP-T0-ZEV"/>
-                    </navigationItem>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="drm-wT-Djh" id="gI1-6P-PFi"/>
+                            <outlet property="delegate" destination="drm-wT-Djh" id="b04-PH-rc3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="info" id="AwQ-jh-8Nc"/>
                     <connections>
-                        <outlet property="infoTableView" destination="pzt-fV-d6X" id="uZN-PY-lfh"/>
-                        <outlet property="infoToolBar" destination="6nE-Vi-a5z" id="G2C-wS-0FZ"/>
+                        <outlet property="infoToolBar" destination="6nE-Vi-a5z" id="ZcW-a7-izm"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eDp-0v-cq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fej-0n-9at" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="185"/>
+            <point key="canvasLocation" x="874" y="185"/>
         </scene>
     </scenes>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NetTVFavorViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NetTVFavorViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
+            </relationships>
         </class>
         <class className="NetTVHomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NetTVHomeViewController.h"/>
@@ -226,10 +253,9 @@
                 <relationship kind="outlet" name="infoWebView" candidateClass="UIWebView"/>
             </relationships>
         </class>
-        <class className="NetTVInfoViewController" superclassName="UIViewController">
+        <class className="NetTVInfoViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NetTVInfoViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="infoTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="infoToolBar" candidateClass="UIToolbar"/>
             </relationships>
         </class>

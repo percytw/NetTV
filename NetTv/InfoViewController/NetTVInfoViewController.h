@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NetTVInfoViewController :  UIViewController
+@interface NetTVInfoViewController :  UITableViewController
 
 @end
